@@ -24,6 +24,12 @@ export const metadata = {
     "online game earn money",
   ],
 
+  icons: {
+    icon: "/logo.png",     
+    shortcut: "/logo.png",
+    apple: "/logo.png",     
+  },
+
   alternates: {
     canonical: "https://jaiclub.house",
   },
