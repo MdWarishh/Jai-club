@@ -81,7 +81,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* ✅ Website Schema */}
+        {/* 🔥 WEBSITE + BRAND SCHEMA */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "JaiClub",
+              url: "https://jaiclub.house",
+              logo: "https://jaiclub.house/logo.png",
+              sameAs: [
+                "https://twitter.com/",
+                "https://www.instagram.com/",
+              ],
+            }),
+          }}
+        />
+
+        {/* 🔥 WEBSITE SEARCH SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -90,62 +108,16 @@ export default function RootLayout({ children }) {
               "@type": "WebSite",
               name: "JaiClub",
               url: "https://jaiclub.house",
-              description:
-                "JaiClub is India's top online gaming platform where you play games and win real cash rewards.",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://jaiclub.house/?q={search_term_string}",
+                target: "https://jaiclub.house/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
           }}
         />
-
-        {/* ✅ FAQ Schema — Google pe special FAQ box dikhayega */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "What is JaiClub?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "JaiClub is an online gaming platform where players can play exciting games and win real cash rewards.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How to register on JaiClub?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Click Register Now on jaiclub.house, fill your details and start playing on JaiClub instantly.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "How to login to JaiClub?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Visit jaiclub.house and click the Login button, then enter your registered mobile number and password.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Is JaiClub safe?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes, JaiClub is a trusted gaming platform with lakhs of active players winning real rewards daily.",
-                  },
-                },
-              ],
-            }),
-          }}
-        />
       </head>
+
       <body>{children}</body>
     </html>
   );
