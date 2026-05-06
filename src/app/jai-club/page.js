@@ -256,7 +256,7 @@ function HeroSection({ onAuthOpen }) {
         </h1>
 
         <p className="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed fade-up" style={{ animationDelay: '0.2s' }}>
-          Play <strong className="text-zinc-200">Jai Club Game</strong> online with millions of players across India.
+    Play <Link href="/jai-club-game" className="text-amber-400 underline">Jai Club Game</Link> online with millions of players across India. Online with millions of players across India.
           Fast, secure, and endlessly exciting — your next big win starts here.
         </p>
 
@@ -395,9 +395,11 @@ function TrustSection() {
         <p className="text-zinc-500 leading-relaxed mb-10">
           Whether you're casual or competitive, JaiClub gives you the tools and rewards to make every session count.
           Explore our{' '}
-          <Link href="/about" style={{ color: '#f59e0b' }} className="hover:underline">full story</Link>
-          {' '}or jump into the{' '}
-          <Link href="/games" style={{ color: '#f59e0b' }} className="hover:underline">game lobby</Link>.
+<Link href="/jai-club-official" className="text-amber-400 underline">official JaiClub page</Link>
+{' '}or learn{' '}
+<Link href="/how-to-play" className="text-amber-400 underline">how to play</Link>
+{' '}or jump into the{' '}
+<Link href="/games" className="text-amber-400 underline">game lobby</Link>.
         </p>
         <div className="flex flex-wrap justify-center gap-3 text-sm text-zinc-500">
           {['🔐 SSL Secured', '✅ Fair Play Certified', '🇮🇳 Made in India', '⚖️ Responsible Gaming'].map((b) => (
@@ -456,6 +458,12 @@ function FAQSection() {
   );
 }
 
+<div className="mt-10 text-center text-sm text-zinc-500">
+  Learn more about{' '}
+  <Link href="/jaiclub" className="text-amber-400 underline">JaiClub</Link>,{' '}
+  <Link href="/jai-club-game" className="text-amber-400 underline">game modes</Link>, or{' '}
+  <Link href="/blog" className="text-amber-400 underline">read our guides</Link>.
+</div>
 // ─── CTA ──────────────────────────────────────────────────────────────────────
 function CTASection({ onAuthOpen }) {
   return (
@@ -480,6 +488,12 @@ function CTASection({ onAuthOpen }) {
         >
           Start Playing Now — It's Free
         </button>
+        <p className="text-zinc-600 text-sm mt-4">
+  New here? Read our{' '}
+  <Link href="/jaiclub-register" className="text-amber-400 underline">registration guide</Link>{' '}
+  or{' '}
+  <Link href="/jaiclub-login" className="text-amber-400 underline">login help</Link>.
+</p>
         <p className="text-zinc-700 text-xs mt-5">No credit card required · Instant access · 18+ only</p>
       </div>
     </section>
@@ -496,7 +510,12 @@ function Footer() {
           <span className="text-white">CLUB</span>
         </span>
         <nav className="flex flex-wrap gap-6 text-sm text-zinc-500">
-          {[['Games', '/games'], ['How to Play', '/how-to-play'], ['About', '/about']].map(([label, href]) => (
+          {[
+  ['JaiClub', '/jaiclub'],
+  ['Jai Club Game', '/jai-club-game'],
+  ['How to Play', '/how-to-play'],
+  ['Blog', '/blog'],
+].map(([label, href]) => (
             <Link key={href} href={href} className="hover:text-amber-400 transition-colors">{label}</Link>
           ))}
         </nav>

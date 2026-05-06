@@ -12,7 +12,7 @@ const steps = [
     title: 'Create Your Free Account',
     icon: '👤',
     color: '#f59e0b',
-    desc: 'Visit JaiClub and click "Register". Fill in your name, mobile number, and a secure password. Verification takes under 60 seconds — no documents needed to get started.',
+    desc: ' Visit <Link href="/jaiclub" className="text-amber-400 underline">JaiClub</Link>and click <Link href="/jaiclub-register" className="text-amber-400 underline">Register</Link>.Fill in your name, mobile number, and a secure password. Verification takes under 60 seconds — no documents needed to get started.',
     tips: ['Use a strong password with letters and numbers', 'Enter your real mobile number for OTP verification', 'Check your inbox for the welcome bonus after signup'],
   },
   {
@@ -20,7 +20,7 @@ const steps = [
     title: 'Log In to Your Dashboard',
     icon: '🔑',
     color: '#06b6d4',
-    desc: 'After registration, log in with your mobile number and password. Your personal dashboard shows your balance, active games, leaderboard rank, and available bonuses.',
+    desc: 'log in using the <Link href="/jaiclub-login" className="text-amber-400 underline">JaiClub login page</Link>. Your personal dashboard shows your balance, active games, leaderboard rank, and available bonuses.',
     tips: ['Enable two-factor authentication for extra security', 'Bookmark jaiclub.com to avoid phishing sites', 'Set a daily login reminder to claim your daily bonus'],
   },
   {
@@ -36,7 +36,7 @@ const steps = [
     title: 'Pick Your Game',
     icon: '🎮',
     color: '#10b981',
-    desc: 'Head to the Games lobby and choose your preferred Jai Club Game mode — Classic, Speed Round, Tournament, or Team Battle. Each mode has clear rules displayed before you start.',
+    desc: 'Head to the <Link href="/jai-club-game" className="text-amber-400 underline">Jai Club Game lobby</Link> and choose your preferred Jai Club Game mode — Classic, Speed Round, Tournament, or Team Battle. Each mode has clear rules displayed before you start.',
     tips: ['Read the game rules before your first real-money game', 'Practice mode is always available in the lobby', 'Filter games by entry fee, prize pool, or duration'],
   },
   {
@@ -196,8 +196,10 @@ function HeroSection() {
         </h1>
 
         <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-8 leading-relaxed">
-          New to JaiClub? This step-by-step guide will take you from zero to your first game win in under 10 minutes.
-          No experience needed — just follow along.
+        New to <Link href="/jaiclub" className="text-amber-400 underline">JaiClub</Link>? 
+This step-by-step guide will help you understand the 
+<Link href="/jai-club-game" className="text-amber-400 underline"> Jai Club Game</Link> 
+and start playing instantly.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 text-sm">
@@ -278,6 +280,12 @@ function GameRulesSection() {
   return (
     <section className="py-20 px-6" id="rules"
       style={{ background: 'rgba(255,255,255,0.02)', borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+        <p className="text-zinc-400 text-sm mb-6">
+  Explore all game modes on the official{" "}
+  <Link href="/jai-club-official" className="text-amber-400 underline">
+    Jai Club Official page
+  </Link>.
+</p>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#f59e0b' }}>Game Rules</p>
@@ -440,14 +448,23 @@ function CTASection() {
         <h2 className="text-3xl md:text-4xl font-black text-white mb-4" style={{ fontFamily: 'Orbitron, sans-serif' }}>
           Ready to Play JaiClub?
         </h2>
-        <p className="text-zinc-400 mb-8">You now know everything to get started. Jump in — your first game is free.</p>
+       <p className="text-zinc-600 text-sm mt-4">
+  New player?{" "}
+  <Link href="/jaiclub-register" className="text-amber-400 underline">
+    Create an account
+  </Link>{" "}
+  or{" "}
+  <Link href="/jaiclub-login" className="text-amber-400 underline">
+    login here
+  </Link>.
+</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/games"
+          <Link href="/jaiclub"
             className="px-8 py-4 rounded-full font-black text-base text-black hover:scale-105 transition-all"
             style={{ background: 'linear-gradient(135deg,#f59e0b,#fb923c)', fontFamily: 'Orbitron, sans-serif', boxShadow: '0 12px 40px rgba(245,158,11,0.3)' }}>
             Start Playing Free →
           </Link>
-          <Link href="/about"
+          <Link href="/jai-club"
             className="px-8 py-4 rounded-full font-semibold text-base text-zinc-300 hover:text-amber-400 transition-all"
             style={{ border: '1.5px solid rgba(255,255,255,0.1)' }}>
             Learn About JaiClub
@@ -466,7 +483,12 @@ function Footer() {
           <span style={{ color: '#f59e0b' }}>JAI</span><span className="text-white">CLUB</span>
         </Link>
         <nav className="flex gap-6 text-sm text-zinc-500">
-          {[['Games', '/games'], ['How to Play', '/how-to-play'], ['About', '/about']].map(([l, h]) => (
+          {[
+  ['JaiClub', '/jaiclub'],
+  ['Jai Club Game', '/jai-club-game'],
+  ['How to Play', '/how-to-play'],
+  ['Blog', '/blog'],
+].map(([l, h]) => (
             <Link key={h} href={h} className="hover:text-amber-400 transition-colors">{l}</Link>
           ))}
         </nav>
