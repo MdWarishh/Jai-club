@@ -29,6 +29,6 @@ export default function robots() {
       },
     ],
 
-    sitemap: "https://jaiclub.house/sitemap.xml",
+    sitemap: "https://www.jaiclub.house/sitemap.xml",
   };
 }

@@ -3,7 +3,7 @@
 import { blogs } from "@/lib/blogs";
 
 export default function sitemap() {
-  const baseUrl = "https://jaiclub.house";
+  const baseUrl = "https://www.jaiclub.house";
 
   // 🔥 Static + SEO Pages
   const staticPages = [
@@ -47,7 +47,7 @@ export default function sitemap() {
       url: `${baseUrl}/jai-club-official`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.85,
+      priority: 0.9,
     },
 
     // 🔥 CONTENT HUB
@@ -63,7 +63,7 @@ export default function sitemap() {
       url: `${baseUrl}/how-to-play`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.8,
+      priority: 0.9,
     },
 
     // 🔥 TRUST PAGES
@@ -71,13 +71,13 @@ export default function sitemap() {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/terms`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.9,
     },
   ];
 
@@ -86,7 +86,7 @@ export default function sitemap() {
     url: `${baseUrl}/blog/${blog.slug}`,
     lastModified: new Date(blog.date),
     changeFrequency: "monthly",
-    priority: 0.7,
+    priority: 0.9,
   }));
 
   return [...staticPages, ...blogPages];
