@@ -1,7 +1,7 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://jaiclub.house"),
+  metadataBase: new URL("https://www.jaiclub.house"),
 
   title: {
     default: "JaiClub – Play Games & Win Real Rewards Online",
@@ -12,16 +12,16 @@ export const metadata = {
     "JaiClub is India's top online gaming platform. Register now to play exciting games and win real cash rewards. Join lakhs of players on JaiClub today!",
 
   keywords: [
-    "JaiClub",
-    "Jai Club",
+    "Jaiclub",
+    "Jai club",
     "JaiClub login",
     "JaiClub register",
-    "JaiClub game",
-    "online earning game India",
-    "play and win real money India",
+    "Jaiclub game",
+    "jaiclub game India",
+    "jaiclub India",
     "jaiclub08",
-    "real cash game app",
-    "online game earn money",
+    "jaiclub com",
+    "jaiclub official",
   ],
 
   icons: {
@@ -31,14 +31,14 @@ export const metadata = {
   },
 
   alternates: {
-    canonical: "https://jaiclub.house",
+    canonical: "https://www.jaiclub.house",
   },
 
   openGraph: {
     title: "JaiClub – Play Games & Win Real Rewards Online",
     description:
       "Join JaiClub and play exciting online games to win real cash rewards. Register now and start earning today!",
-    url: "https://jaiclub.house",
+    url: "https://www.jaiclub.house",
     siteName: "JaiClub",
     images: [
       {
@@ -73,7 +73,10 @@ export const metadata = {
 
   // ✅ Google Search Console Verification — ADD HO GAYA
   verification: {
-    google: "3mgo4-Wrje8YSRigmAZHahCks9KL3h68UtsC3v6Xkz4",
+     google: [
+    "3mgo4-Wrje8YSRigmAZHahCks9KL3h68UtsC3v6Xkz4", // old
+    "L9OdNR6_9iN3IruI2adhoxybARcRDDIt_1D28fmMncA", // new
+  ],    
   },
 };
 
@@ -89,8 +92,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "JaiClub",
-              url: "https://jaiclub.house",
-              logo: "https://jaiclub.house/logo.png",
+              url: "https://www.jaiclub.house",
+              logo: "https://www.jaiclub.house/logo.png",
               sameAs: [
                 "https://twitter.com/",
                 "https://www.instagram.com/",
@@ -107,10 +110,10 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "JaiClub",
-              url: "https://jaiclub.house",
+              url: "https://www.jaiclub.house",
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://jaiclub.house/search?q={search_term_string}",
+                target: "https://www.jaiclub.house/search?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),
