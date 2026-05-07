@@ -1,26 +1,34 @@
-// app/robots.js
-
 export default function robots() {
   return {
     rules: [
       {
         userAgent: "*",
 
-        // ✅ Allow everything important
-        allow: ["/"],
+        // ✅ Allow all important rendering files
+        allow: [
+          "/",
+          "/_next/static/",
+          "/_next/image/",
+        ],
 
-        // ❌ Block only unnecessary/system paths
+        // ❌ Block only sensitive / useless areas
         disallow: [
           "/api/",
-          "/_next/",
           "/admin/",
           "/private/",
           "/tmp/",
+          
+          // optional (agar future me use kare)
+          "/dashboard/",
+          "/settings/",
+          
+          // query-based junk URLs (duplicate content control)
+          "/*?*utm_",
+          "/*?*ref=",
         ],
       },
     ],
 
     sitemap: "https://jaiclub.house/sitemap.xml",
-    host: "https://jaiclub.house",
   };
 }
